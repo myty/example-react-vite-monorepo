@@ -1,0 +1,16 @@
+{
+  "name": "example-react-vite-monorepo",
+  "workspaces":[
+    "frontend",
+    "shared"
+  ],"scripts": {
+    "build": "tsc --build && npm run build --workspace=frontend",
+    "clean": "tsc --build --clean",
+    "dev": "npm run watch && npm run dev --workspace=frontend",
+    "serve": "npm run serve --workspace=frontend",
+    "watch": "tsc --build --watch"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}
